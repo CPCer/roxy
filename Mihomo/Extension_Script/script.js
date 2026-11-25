@@ -466,7 +466,7 @@ function overwriteRules(params) {
         "RULE-SET,apple_cn_non_ip,DIRECT",
         "RULE-SET,apple_services,🍎 苹果服务",
         "RULE-SET,microsoft_non_ip,Ⓜ️ 微软服务",
-        "RULE-SET,ai-proxy-rules,🤖 AI",
+        "RULE-SET,ai_proxy_rules,🤖 AI",
         "RULE-SET,global_non_ip,🎯 节点选择",
         "RULE-SET,domestic_non_ip,DIRECT",
         "RULE-SET,direct_non_ip,DIRECT",
@@ -543,10 +543,10 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        ai-proxy-rules: {
+        ai_proxy_rules: {
             type: "http",
             path: "./AI_ruleset/VPSDance_Clash_glabal.yaml",
-            url: "https://cdn.jsdelivr.net/gh/VPSDance/ai-proxy-rules@main/rules/clash/global.yaml",
+            url: "https://cdn.jsdelivr.net/gh/VPSDance/ai_proxy_rules@main/rules/clash/global.yaml",
             behavior: "classical",
             interval: 43200,
             proxy: "🎯 节点选择"
