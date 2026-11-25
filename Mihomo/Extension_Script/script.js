@@ -44,7 +44,7 @@ const GENERATED_NAMESERVER_POLICY = {
     "doh.pub": "119.29.29.29",
     "dns.pub": "119.29.29.29",
     "doh.360.cn": "101.198.198.198",
-    "rule-set:mihomo_nameserver_policy_alibaba": "https://dns.alidns.com/dns-query",
+    //"rule-set:mihomo_nameserver_policy_alibaba": "https://dns.alidns.com/dns-query",
     "rule-set:mihomo_nameserver_policy_tencent": "https://doh.pub/dns-query",
     "rule-set:mihomo_nameserver_policy_bilibili": "https://doh.pub/dns-query",
     "rule-set:mihomo_nameserver_policy_xiaomi": "https://doh.pub/dns-query",
@@ -418,7 +418,7 @@ function overwriteProxyGroups(params) {
             icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png"
         },
         {
-            name: "🤖 AIGC",
+            name: "🤖 AI",
             type: "select",
             proxies: ["US - 自动选择", "🎯 节点选择", "HK - 自动选择", "JP - 自动选择", "KR - 自动选择", "SG - 自动选择", "UK - 自动选择", "FR - 自动选择", "DE - 自动选择", "TW - 自动选择", "其它 - 自动选择"],
             // "include-all": true,
@@ -466,7 +466,7 @@ function overwriteRules(params) {
         "RULE-SET,apple_cn_non_ip,DIRECT",
         "RULE-SET,apple_services,🍎 苹果服务",
         "RULE-SET,microsoft_non_ip,Ⓜ️ 微软服务",
-        "RULE-SET,ai_non_ip,🤖 AIGC",
+        "RULE-SET,ai-proxy-rules,🤖 AI",
         "RULE-SET,global_non_ip,🎯 节点选择",
         "RULE-SET,domestic_non_ip,DIRECT",
         "RULE-SET,direct_non_ip,DIRECT",
@@ -533,7 +533,7 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        // AIGC
+        // AI
         ai_non_ip: {
             type: "http",
             behavior: "classical",
@@ -541,6 +541,14 @@ function overwriteRules(params) {
             path: "./rule_set/sukkaw_ruleset/ai_non_ip.txt",
             interval: 43200,
             format: "text",
+            proxy: "🎯 节点选择"
+        },
+        ai-proxy-rules: {
+            type: "http",
+            path: "./AI_ruleset/VPSDance_Clash_glabal.yaml",
+            url: "https://cdn.jsdelivr.net/gh/VPSDance/ai-proxy-rules@main/rules/clash/global.yaml",
+            behavior: "classical",
+            interval: 43200
             proxy: "🎯 节点选择"
         },
         // telegram
