@@ -548,7 +548,7 @@ function overwriteRules(params) {
             path: "./AI_ruleset/VPSDance_Clash_glabal.yaml",
             url: "https://cdn.jsdelivr.net/gh/VPSDance/ai-proxy-rules@main/rules/clash/global.yaml",
             behavior: "classical",
-            interval: 43200
+            interval: 43200,
             proxy: "🎯 节点选择"
         },
         // telegram
