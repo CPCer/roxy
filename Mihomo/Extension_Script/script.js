@@ -424,6 +424,12 @@ function overwriteProxyGroups(params) {
             // "include-all": true,
             icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png"
         },
+            name: "𝐆 Google",
+            type: "select",
+            proxies: ["US - 自动选择", "🎯 节点选择", "HK - 自动选择", "JP - 自动选择", "KR - 自动选择", "SG - 自动选择", "UK - 自动选择", "FR - 自动选择", "DE - 自动选择", "TW - 自动选择", "其它 - 自动选择"],
+            // "include-all": true,
+            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png"
+        },
         {
             name: "🍎 苹果服务",
             type: "select",
@@ -467,6 +473,7 @@ function overwriteRules(params) {
         "RULE-SET,apple_services,🍎 苹果服务",
         "RULE-SET,microsoft_non_ip,Ⓜ️ 微软服务",
         "RULE-SET,ai_proxy_rules,🤖 AI",
+        "RULE-SET,Google_rules,𝐆 Google",
         "RULE-SET,global_non_ip,🎯 节点选择",
         "RULE-SET,domestic_non_ip,DIRECT",
         "RULE-SET,direct_non_ip,DIRECT",
@@ -549,6 +556,15 @@ function overwriteRules(params) {
             url: "https://cdn.jsdelivr.net/gh/VPSDance/ai_proxy_rules@main/rules/clash/global.yaml",
             behavior: "classical",
             interval: 43200,
+            proxy: "🎯 节点选择"
+        },
+        Google_rules: {
+            type: "http",
+            path: "./rule_set/dayvight_Loon_Google_full.list",
+            url: "https://raw.githubusercontent.com/dayvight/loon-antigravity-rules/main/rules/google-full.list",
+            behavior: "classical",
+            interval: 43200,
+            format: "text",
             proxy: "🎯 节点选择"
         },
         // telegram
